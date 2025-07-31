@@ -53,3 +53,7 @@ ul li a{
     cursor: pointer;
     transition: scale 0.2 ease;
 }
+.action-btn a:hover{
+    scale: 1.1;
+}
+

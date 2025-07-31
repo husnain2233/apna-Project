@@ -1,16 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Light and Dark Mode Example</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            transition: background-color 0.5s, color 0.5s;
+        }
+        
+        .light-mode {
+            background-color: #FFFFFF;
+            color: #000000;
+        }
+        
+        .dark-mode {
+            background-color: #000000;
+            color: #FFFFFF;
+        }
+        
+        .theme-toggle-button {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            padding: 10px;
+            cursor: pointer;
+        }
+    </style>
 </head>
-<body>
-    <h1>Welcome to HTML GITHUB Project</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, architecto soluta. Perferendis quam et cumque, culpa qui odio? Voluptates unde impedit illo! Expedita culpa eius ratione tempore dolor, quidem eligendi.</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, architecto soluta. Perferendis quam et cumque, culpa qui odio? Voluptates unde impedit illo! Expedita culpa eius ratione tempore dolor, quidem eligendi.</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, architecto soluta   . Perferendis quam et cumque, culpa qui odio? Voluptates unde impedit illo! Expedita culpa eius ratione tempore dolor, quidem eligendi.</p>
+<body class="light-mode">
+    <button class="theme-toggle-button" id="theme-toggle">
+        <i fa-></i>
+    </button>
     
+    <script>
+        var themeToggleButton = document.getElementById('theme-toggle');
+        themeToggleButton.onclick = function() {
+            document.body.classList.toggle('dark-mode');
+            document.body.classList.toggle('light-mode');
+        };
+    </script>
 </body>
 </html>
